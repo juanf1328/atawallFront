@@ -16,7 +16,7 @@
     margin-top: 2rem;
     text-align: center;
     font-size: 2rem; 
-
+    margin-bottom: 5rem;
   }
   
   .titulo {
@@ -80,6 +80,7 @@
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
+    padding: 4px;
   }
   
   .otro-boton:first-child {
@@ -89,4 +90,5 @@
   .otro-boton:not(:first-child) {
     background-color: #1b1b1b;
   }
+  
   

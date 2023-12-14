@@ -1,11 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Register.css";
 
 const Register = () => {
   const [perfil, setPerfil] = useState("Individuo");
+  const navigate = useNavigate();
+
 
   const handleButtonClick = (selectedPerfil) => {
     setPerfil(selectedPerfil);
+  };
+
+  const handleContinueClick = () => {
+    // Redirige al usuario a la página de registro solo si el perfil es "Empresa"
+    if (perfil === "Empresa") {
+      navigate('/register2');
+    }
   };
 
   return (
@@ -43,7 +53,7 @@ const Register = () => {
           simply dummy text of the printing and typesetting industry.
         </p>
 
-        <button className="registrarme">
+        <button onClick={handleContinueClick} className="registrarme">
           <i className="fa fa-paper-plane"></i>
           Registrarme
         </button>

@@ -1,0 +1,38 @@
+.cuenta-empresa {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+.cuenta-empresa h1 {
+    color: #4A4A4A;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.cuenta-empresa label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.cuenta-empresa input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+.cuenta-empresa button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.cuenta-empresa button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.cuenta-empresa form {
+    max-width: 400px;
+    width: 100%;
+}
