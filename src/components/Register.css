@@ -42,13 +42,13 @@
   }
   
   .perfil:not(.perfil-activo) {
-    background-color: #1b1b1b;
+    background-color: #212121;
     color: #fff;
   }
   
   .perfil-activo {
-    background-color: #05c988; 
-    color: #1b1b1b; 
+    background-color: #14dbad; 
+    color: #212121; 
   }
   
   .perfil-descripcion {
@@ -59,9 +59,9 @@
   .registrarme {
     width: 13rem;
     height: 50px;
-    background-color: #1b1b1b;
-    color: #05c988;
-    border-color: #05c988;
+    background-color: #212121;
+    color: #14dbad;
+    border-color: #14dbad;
     font-size: 18px;
     cursor: pointer;
     margin-top: 6rem;
@@ -84,11 +84,11 @@
   }
   
   .otro-boton:first-child {
-    background-color: #05c988;
+    background-color: #14dbad;
   }
   
   .otro-boton:not(:first-child) {
-    background-color: #1b1b1b;
+    background-color: #212121;
   }
   
   

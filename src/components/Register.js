@@ -40,13 +40,13 @@ const Register = () => {
             <i className="fa fa-building"></i>
             Empresa
           </button>
-          <button
+          {/* <button
             className={`perfil ${perfil === "Proveedor" ? "perfil-activo" : ""}`}
             onClick={() => handleButtonClick("Proveedor")}
           >
             <i className="fa fa-truck"></i>
             Proveedor
-          </button>
+          </button> */}
         </div>
         <p className="perfil-descripcion">
           Perfil de cuenta destinado a todo tipo de Empresas que bla bla Ipsum is

@@ -40,7 +40,7 @@ const Login = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5092/api/Auth', requestOptions);
+      const response = await fetch('https://localhost:7082/api/Auth', requestOptions);
 
       if (!response.ok) {
         throw new Error('Credenciales inválidas');
