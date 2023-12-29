@@ -14,7 +14,7 @@ const Register = () => {
   const handleContinueClick = () => {
     // Redirige al usuario a la página de registro solo si el perfil es "Empresa"
     if (perfil === "Empresa") {
-      navigate('/register2');
+      navigate('/CompanyRegister1');
     }
   };
 
@@ -59,9 +59,9 @@ const Register = () => {
         </button>
 
         <div className="otros-botones">
-          <button className="otro-boton" style={{ backgroundColor: "#05c988" }}></button>
-          <button className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
-          <button className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
+          <button disabled className="otro-boton" style={{ backgroundColor: "#05c988" }}></button>
+          <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
+          <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
         </div>
       </div>
     </div>

@@ -122,9 +122,9 @@ const Login = () => {
       <Row>
         <Col span={8}>
           <div className="language-container">
-            <Button style={{ color: '#7c7c7c', background: '#1b1b1b', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('english')} className="language-button">ENG</Button>
+            <Button style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('english')} className="language-button">ENG</Button>
             <div className="language-divider" />
-            <Button style={{ color: '#7c7c7c', background: '#1b1b1b', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('spanish')} className="language-button">ESP</Button>
+            <Button style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('spanish')} className="language-button">ESP</Button>
           </div>
         </Col>
       </Row>
