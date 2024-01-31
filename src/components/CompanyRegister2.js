@@ -1,8 +1,23 @@
 import React from 'react';
 import './CompanyRegister2.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const CompanyRegister2 = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Datos del formulario:');
+
+    
+    navigate('/finish');
+  };
+
+
+// const CompanyRegister2 = () => {
   return (
+    <form onSubmit={handleSubmit}>
     <div className="CompanyRegister2">
         <h2 className="form-title" style={{fontSize:'20px', color: '#05c988', }}>Cuenta Empresa</h2>
       <p className="form-subtitle"style={{fontSize:'15px'}}>Verificacion de datos</p>
@@ -25,7 +40,7 @@ const CompanyRegister2 = () => {
       </div>
       </div>
       <div>
-      <button className='finalizar' type="submit">Finalizar</button>
+      <button onClick={handleSubmit} className='finalizar' type="submit">Finalizar</button>
       </div>
       <div className="otros-botones">
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
@@ -34,7 +49,9 @@ const CompanyRegister2 = () => {
         </div>
     </div>
     </div>
+    </form>
   );
 };
+
 
 export default CompanyRegister2;

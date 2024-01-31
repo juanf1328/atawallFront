@@ -38,12 +38,13 @@ const Formulario = () => {
       <p className="form-subtitle">Complete el siguiente formulario</p>
       <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <div className="half-width">
+        <div className="half-width" style={{marginBottom:'7px'}}>
           <select
             name="pais"
             value={datos.pais}
             onChange={handleChange}
             placeholder="Selecciona un país"
+            style={{backgroundColor:'#000', color:'#c1c1c1'}}
           >
             <option value="">Selecciona un país</option>
             <option value="opcion1">Opción 1</option>
@@ -55,6 +56,7 @@ const Formulario = () => {
             value={datos.rubro}
             onChange={handleChange}
             placeholder="Selecciona un rubro"
+            style={{backgroundColor:'#000', color:'#c1c1c1'}}
           >
             <option value="">Selecciona un rubro</option>
             <option value="opcion1">Opción 1</option>
