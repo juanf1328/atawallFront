@@ -2,7 +2,7 @@
     font-family: 'Helvetica Neue', sans-serif;
 }
 .Register {
-    width: 37rem;
+    width: auto;
     margin: 0 auto;
     padding: 40px;
     background-color: #000;
@@ -85,10 +85,12 @@
   
   .otro-boton:first-child {
     background-color: #14dbad;
+    width: auto;
   }
   
   .otro-boton:not(:first-child) {
     background-color: #212121;
+    width: auto;
   }
   
   
