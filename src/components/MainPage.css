@@ -1,0 +1,21 @@
+*{
+    table-layout: fixed;
+}
+.conteiner{
+    background: #000;
+    margin: 1;
+    padding: 1%;
+    text-align: center;
+    width: 30rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.main1{
+    background: #212121 !important;
+    color: #fff !important;
+    border-radius: 2rem !important;
+}
