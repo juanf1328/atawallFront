@@ -13,7 +13,7 @@ const MainPage = () => {
     console.log('Main');
 
     
-    navigate('/finish');
+    navigate('/');
   };
 
   return (
