@@ -65,8 +65,8 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h1>{language === 'english' ? 'atawall' : 'atawall'}</h1>
-      <h2 className="subtitle">{language === 'english' ? 'Welcome' : 'Bienvenido'}</h2>
+      <h1 style={{ fontSize:'2rem' }} >{language === 'english' ? 'atawall' : 'atawall'}</h1>
+      <h2 style={{ fontSize:'1rem' }} className="subtitle">{language === 'english' ? 'Welcome' : 'Bienvenido'}</h2>
       {showLoginForm && (
         <>
           <Row>
@@ -105,26 +105,26 @@ const Login = () => {
       <Row>
         <Col span={8}>
           <div className="button-container">
-            <Button onClick={handleLoginClick} style={{ width: '15rem', color: '#000', background: '#05c988', borderColor: '#05c988' }}>
+            <Button onClick={handleLoginClick} style={{ borderRadius:'17px' , width: '15rem', color: '#000', background: '#05c988', borderColor: '#05c988' }}>
               {showLoginForm ? 'Iniciar Sesión' : 'Login'}
             </Button>
           </div>
           <div className="button-container">
-            <Button onClick={handleRegisterClick} style={{ width: '15rem', marginTop: '10px', background: '#1b1b1b', color: '#fff', borderColor: '#fff' }}>{language === 'english' ? 'Register' : 'Registrarme'}</Button>
+            <Button onClick={handleRegisterClick} style={{ borderRadius:'17px' , width: '15rem', marginTop: '10px', background: '#1b1b1b', color: '#fff', borderColor: '#fff' }}>{language === 'english' ? 'Register' : 'Registrarme'}</Button>
           </div>
         </Col>
       </Row>
       <Row>
         <Col span={8}>
-          <p style={{ color: '#05c988', textDecoration: 'underline', textDecorationColor: '#05c988', width: '7rem', cursor: 'pointer', marginLeft: '3rem' }}>{language === 'english' ? 'Need Help?' : 'Necesitas ayuda?'}</p>
+          <p style={{ marginTop:'4rem' ,color: '#05c988', textDecoration: 'underline', textDecorationColor: '#05c988', width: '7rem', cursor: 'pointer', marginLeft: '3rem' }}>{language === 'english' ? 'Need Help?' : 'Necesitas ayuda?'}</p>
         </Col>
       </Row>
       <Row>
         <Col span={8}>
           <div className="language-container">
-            <Button style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('english')} className="language-button">ENG</Button>
-            <div className="language-divider" />
             <Button style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('spanish')} className="language-button">ESP</Button>
+            <div className="language-divider" />
+            <Button style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('english')} className="language-button">ENG</Button>
           </div>
         </Col>
       </Row>
