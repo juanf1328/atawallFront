@@ -15,7 +15,7 @@ const FinishRegister = () => {
     return (
       <form onSubmit={handleSubmit}>
         <div className='modalFinish'>
-            <h1>Felicitaciones</h1>
+        <h1>Felicitaciones <br />&#10004;</h1>
             <p>Su empresa ya se encuentra registrada, sube una imagen de perfil (Logotipo) que le permita identificarte rapidamente en nuestra plataforma.</p>
             <button onClick={handleSubmit} className='finalizar' type="submit">Mas tarde</button>
         </div>

@@ -116,7 +116,7 @@ const Login = () => {
       </Row>
       <Row>
         <Col span={8}>
-          <p style={{ marginTop:'4rem' ,color: '#05c988', textDecoration: 'underline', textDecorationColor: '#05c988', width: '7rem', cursor: 'pointer', marginLeft: '3rem' }}>{language === 'english' ? 'Need Help?' : 'Necesitas ayuda?'}</p>
+          <p style={{ marginTop:'4rem' ,color: '#05c988', textDecoration: 'underline', textDecorationColor: '#05c988', width: '7rem', cursor: 'pointer', marginLeft: '2.3rem' }}>{language === 'english' ? 'Need Help?' : 'Necesitas ayuda?'}</p>
         </Col>
       </Row>
       <Row>

@@ -18,9 +18,22 @@ const MainPage = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className='conteiner'>
+      <div className="search">
+  <input type="text" placeholder="Search..." />
+  <button>Search</button> 
+</div>
+
+<div className="bell-icon">
+  <img src="/bell.svg" /> 
+</div>
+
+<div className="bell-icon">
+  <img src="/bell.svg" /> 
+</div>
+
+      <div className='container'>
       <div>
-        <h1>Main Page</h1>
+        <h1 style={{fontSize:'1rem', marginBottom:'1rem'}}>Main Page</h1>
         </div>
         <div>
           <button className='main1' onClick={handleSubmit} type="submit">Muro</button>

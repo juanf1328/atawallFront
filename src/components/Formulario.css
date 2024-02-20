@@ -1,23 +1,4 @@
-/* form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-   } */
-   .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: auto; 
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #000;
-    border-radius: 8px;
-  }
-  
+
   .form-title {
     text-align: center;
   }
@@ -36,14 +17,38 @@
    }
    
   
+/* Estilos para inputs y selects */
 input[type='text'],
 input[type='email'],
 select {
   padding: 5px;
   margin-top: 5px;
   border: 1px solid #c1c1c1;
-  border-radius: 4px;
-  width: 100%; 
+  border-radius: 22px; /* Redondea los bordes a 22px */
+  width: 100%;
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+  font-size: 14px;
+  background-color: #000;
+  color: #c1c1c1;
+}
+
+input{
+  background-color: #000;
+  color: #c1c1c1;
+  height: 38px;
+}
+
+
+/* Ajusta el tamaño de los selects */
+select {
+  height: 35px; /* Ajusta la altura para que sea igual que la de los inputs */
+}
+
+/* Ajusta el tamaño de los selects en dispositivos pequeños */
+@media (max-width: 600px) {
+  select {
+    height: 30px; /* Reducir la altura en dispositivos pequeños si es necesario */
+  }
 }
 
 
@@ -57,29 +62,76 @@ select {
 /* Estilos para el botón */
 button[type='submit'] {
   margin-top: 20px;
-  padding: 10px;
-  background-color: #05c988;
-  color: #c1c1c1;
+  padding: 8px 16px; /* Ajustar el padding para hacerlo más pequeño */
+  background-color: #212121;
+  color: #05c988;
+  border-color: #05c988;
   border: none;
-  border-radius: 4px;
+  border-radius: 21px;
   cursor: pointer;
+  width: 150px; /* Establecer un ancho fijo para el botón */
+  margin: 0 auto; /* Centrar el botón */
+  display: block; /* Hacer que el botón sea un bloque para centrarlo */
+  font-size: 21px;
 }
+button[type='submit'] {
+  border-color: #05c988 !important; /* Cambia el color del borde */
+}
+
+@media (max-width: 600px) {
+  button[type='submit'] {
+    width: 120px; /* Reducir aún más el ancho en dispositivos pequeños si es necesario */
+    padding: 6px 12px; /* Ajustar el padding para dispositivos pequeños */
+  }
+}
+
 
 button[type='submit']:hover {
-  background-color: #2b2b2b;
-  color: #09a16f;
+  background-color: #05c988;
+  color: #212121;
+  border-color: #212121;
 }
 
-/* Estilos para el contenedor del formulario */
+.responsable-center {
+  text-align: center;
+}
+
+
+
+.half-width select {
+  width: calc(50% - 5px); /* Ancho del 50% con un pequeño espacio entre elementos */
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 100%; /* Cambia el ancho a 100% para que ocupe todo el ancho disponible */
+  max-width: 400px; /* Establece un ancho máximo para la tarjeta */
   margin: 0 auto;
   padding: 20px;
   background-color: #000;
   border-radius: 8px;
-  text-align: center; 
 }
+
+/* Añade un nuevo estilo para la clase que define la mitad del ancho */
+.half-width {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos uniformemente */
+}
+
+.otros-botonesFormulario{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 10px; /* Reduce el padding en dispositivos pequeños */
+  }
+}
+
+

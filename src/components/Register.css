@@ -1,78 +1,132 @@
-*{
-    font-family: 'Helvetica Neue', sans-serif;
+* {
+  font-family: 'Helvetica Neue', sans-serif;
 }
-.Register {
-    width: auto;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #000;
-    text-align: center;
-    color: #fff;
-    border-radius: 10px;
-    margin-top: -3rem;
-    height: 24rem;
-  }
-  .titulo-global {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 2rem; 
-    margin-bottom: 5rem;
-  }
-  
-  .titulo {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .perfiles {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-top: 3rem;
-  }
-  
-  .perfil {
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    max-width: 150px;
-    margin-right: 10px;
-    text-align: center;
-  }
-  
-  .perfil:not(.perfil-activo) {
-    background-color: #212121;
-    color: #fff;
-  }
-  
-  .perfil-activo {
-    background-color: #14dbad; 
-    color: #212121; 
-  }
-  
-  .perfil-descripcion {
-    font-size: 14px;
-    margin-top: 3rem;
-  }
-  
-  .registrarme {
-    width: 13rem;
-    height: 50px;
-    background-color: #212121;
-    color: #14dbad;
-    border-color: #14dbad;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 6rem;
-  }
 
-  button{
-    text-align: center;
+.Register {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: -4rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo-global {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+.titulo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.perfiles {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 3rem;
+}
+
+.perfil {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  max-width: 150px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.perfil:not(.perfil-activo) {
+  background-color: #212121;
+}
+
+.perfil-activo {
+  background-color: #14dbad;
+  color: #212121;
+}
+
+.perfil-descripcion {
+  font-size: 14px;
+  margin-top: 3rem;
+}
+
+.registrarme {
+  width: 13rem;
+  height: 50px;
+  background-color: #212121;
+  color: #05c988;
+  border-color: #05c988;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 6rem;
+  margin: 0 auto;
+}
+
+button {
+  text-align: center;
+}
+
+.otro-boton {
+  width: 100px;
+  height: 2px;
+  margin: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.otro-boton:first-child {
+  background-color: #05c988;
+}
+
+.otro-boton:not(:first-child) {
+  background-color: #212121;
+}
+
+/* Estilos para pantallas grandes (mayores a 768px de ancho) */
+@media (min-width: 768px) {
+  .Register {
+    width: 50%;
+    max-width: 800px;
+    padding: 60px;
+    margin-top: -6rem;
   }
-  
+}
+
+/* Estilos para pantallas medianas (entre 576px y 768px de ancho) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .Register {
+    width: 70%;
+    max-width: 600px;
+    padding: 50px;
+    margin-top: -5rem;
+  }
+}
+
+/* Estilos para pantallas pequeñas (menores a 576px de ancho) */
+@media (max-width: 575px) {
+  .Register {
+    width: 75%;
+    max-width: 400px;
+    padding: 40px;
+    margin-top: -4rem;
+  }
   .otro-boton {
-    width: 100px;
+    width: 50px;
     height: 2px;
     margin: 10px;
     color: #fff;
@@ -82,15 +136,4 @@
     border-radius: 5px;
     padding: 4px;
   }
-  
-  .otro-boton:first-child {
-    background-color: #14dbad;
-    width: auto;
-  }
-  
-  .otro-boton:not(:first-child) {
-    background-color: #212121;
-    width: auto;
-  }
-  
-  
+}

@@ -20,9 +20,9 @@ const Register = () => {
 
   return (
     <div>
-      <h1 className="titulo-global">atawall</h1>
+      <h1 style={{ fontSize:'2rem', marginBottom:'6rem' }} className="titulo-global">atawall</h1>
       <div className="Register">
-        <h1 className="titulo">¿Con qué perfil desea registrarte?</h1>
+        <h2 style={{ fontSize:'1rem' }} className="titulo">¿Con qué perfil desea registrarte?</h2>
         <div className="perfiles">
           <button
             className={`perfil ${perfil === "Individuo" ? "perfil-activo" : ""}`}

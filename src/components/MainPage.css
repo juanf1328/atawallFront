@@ -1,21 +1,84 @@
-*{
-    table-layout: fixed;
-}
-.conteiner{
+.container {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
     background: #000;
-    margin: 1;
-    padding: 1%;
-    text-align: center;
-    width: 30rem;
-    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  } 
+  
+  .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    padding: 3rem;
+    gap: 20px;
+  }
+  
+  .main1 {
+     margin: 1rem 0;
+     padding: 1.5rem 2rem;
+     font-size: 1.5rem;
+     color: #fff !important;
+  }
 
-}
+  .main1:hover{
+    color: #05c988 !important;
+    background: #222222 !important;
+  }
 
-.main1{
-    background: #212121 !important;
-    color: #fff !important;
-    border-radius: 2rem !important;
-}
+  .search {
+    margin: 0 auto 2rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+  
+  .search input {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .search button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #05c988;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+  }
+
+  .bell-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem; 
+  }
+  
+  .bell-icon img {
+    width: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .bell-icon {
+      right: 0.5rem;
+    }
+    
+    .bell-icon img {
+      width: 1rem;
+    }
+  }

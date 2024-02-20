@@ -17,7 +17,8 @@ body {
 .login-container {
   text-align: center;
   border-radius: 10px;
-  padding: 3rem;
+  /* padding: 3rem; */
+  
 }
 
 h1 {
@@ -64,8 +65,12 @@ input::placeholder {
 .language-divider {
   width: 2px;
   height: 15px; 
-  background-color: #14dbad;
-  margin: 0 10px; 
+  background-color: #05c988;
+  margin: 0 74px; 
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 
 button {

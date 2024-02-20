@@ -34,8 +34,8 @@ const Formulario = () => {
 
   return (
     <div>
-      <h2 className="form-title">Cuenta Empresa</h2>
-      <p className="form-subtitle">Complete el siguiente formulario</p>
+      <h2 style={{fontSize:'1.3rem',color:'#05c988'}} className="form-title">Cuenta Empresa</h2>
+      <p style={{fontSize:'1.5rem'}} className="form-subtitle">Complete el siguiente formulario</p>
       <div className="form-container">
       <form onSubmit={handleSubmit}>
         <div className="half-width" style={{marginBottom:'7px'}}>
@@ -43,10 +43,10 @@ const Formulario = () => {
             name="pais"
             value={datos.pais}
             onChange={handleChange}
-            placeholder="Selecciona un país"
+            placeholder="País"
             style={{backgroundColor:'#000', color:'#c1c1c1'}}
           >
-            <option value="">Selecciona un país</option>
+            <option value="">País</option>
             <option value="opcion1">Opción 1</option>
             <option value="opcion2">Opción 2</option>
            
@@ -55,10 +55,10 @@ const Formulario = () => {
             name="rubro"
             value={datos.rubro}
             onChange={handleChange}
-            placeholder="Selecciona un rubro"
+            placeholder="Rubro"
             style={{backgroundColor:'#000', color:'#c1c1c1'}}
           >
-            <option value="">Selecciona un rubro</option>
+            <option value="">Rubro</option>
             <option value="opcion1">Opción 1</option>
             <option value="opcion2">Opción 2</option>
             
@@ -70,13 +70,15 @@ const Formulario = () => {
           onChange={handleChange}
           placeholder="Nombre Legal"
         />
+        <div className="responsable-center">
+           <label>Responsable de alta</label>
+        </div>
         <input
           type="text"
           name="telefono"
           onChange={handleChange}
           placeholder="Tel."
         />
-        <label>Responsable de alta</label>
         <input
           type="text"
           name="apellidoYNombre"
@@ -89,8 +91,8 @@ const Formulario = () => {
           onChange={handleChange}
           placeholder="Mail"
         />
-        <button onClick={handleSubmit} type="submit">Continuar</button>
-        <div className="otros-botones">
+        <button style={{borderBlockColor:'#05c988'}} onClick={handleSubmit} type="submit">Continuar</button>
+        <div className="otros-botonesFormulario">
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
           <button disabled className="otro-boton" style={{ backgroundColor: "#05c988" }}></button>
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
