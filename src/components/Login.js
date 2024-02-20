@@ -80,6 +80,8 @@ const Login = () => {
                   height: '2rem',
                   marginTop: '1rem',
                   borderColor: '#1b1b1b',
+                  background:'#fff',
+                  color:'#000'
                 }}
                 placeholder={language === 'english' ? 'Email' : 'Correo electrónico'}
               />
@@ -87,7 +89,7 @@ const Login = () => {
           </Row>
           <Row>
             <Col span={8}>
-              <Input.Password
+              <Input
                 onChange={handlePasswordChange}
                 style={{
                   width: '14rem',
@@ -95,6 +97,8 @@ const Login = () => {
                   marginLeft: '-0.5rem',
                   height: '2rem',
                   borderColor: '#1b1b1b',
+                  background:'#fff',
+                  color:'#000'
                 }}
                 placeholder={language === 'english' ? 'Password' : 'Contraseña'}
               />
