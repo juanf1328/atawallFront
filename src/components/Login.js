@@ -65,7 +65,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h1 style={{ fontSize:'2rem' }} >{language === 'english' ? 'atawall' : 'atawall'}</h1>
+      <h1 style={{ fontSize:'2rem' }} >{language === 'english' ? 'Atawall' : 'Atawall'}</h1>
       <h2 style={{ fontSize:'1rem' }} className="subtitle">{language === 'english' ? 'Welcome' : 'Bienvenido'}</h2>
       {showLoginForm && (
         <>
