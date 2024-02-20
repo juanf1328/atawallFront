@@ -34,10 +34,11 @@ const Formulario = () => {
 
   return (
     <div>
-      <h2 style={{fontSize:'1.3rem',color:'#05c988'}} className="form-title">Cuenta Empresa</h2>
-      <p style={{fontSize:'1.5rem'}} className="form-subtitle">Complete el siguiente formulario</p>
+      <h2 style={{fontSize:'1.3rem',color:'#14dbad'}} className="form-title">Cuenta Empresa</h2>
+      <p style={{fontSize:'1.3rem'}} className="form-subtitle">Complete el siguiente formulario <span className="iconEmp"></span></p>
       <div className="form-container">
       <form onSubmit={handleSubmit}>
+        <div className="select-group">
         <div className="half-width" style={{marginBottom:'7px'}}>
           <select
             name="pais"
@@ -91,11 +92,12 @@ const Formulario = () => {
           onChange={handleChange}
           placeholder="Mail"
         />
-        <button style={{borderBlockColor:'#05c988'}} onClick={handleSubmit} type="submit">Continuar</button>
+        <button style={{borderBlockColor:'#14dbad'}} onClick={handleSubmit} type="submit">Continuar</button>
         <div className="otros-botonesFormulario">
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
-          <button disabled className="otro-boton" style={{ backgroundColor: "#05c988" }}></button>
+          <button disabled className="otro-boton" style={{ backgroundColor: "#14dbad" }}></button>
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
+        </div>
         </div>
       </form>
     </div>

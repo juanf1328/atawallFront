@@ -19,8 +19,8 @@ const CompanyRegister2 = () => {
   return (
     <form onSubmit={handleSubmit}>
     <div className="CompanyRegister2">
-        <h2 className="form-title" style={{fontSize:'20px', color: '#05c988', }}>Cuenta Empresa</h2>
-      <p className="form-subtitle2"style={{fontSize:'15px'}}>Verificacion de datos</p>
+        <h2 className="form-title" style={{fontSize:'20px', color: '#14dbad', }}>Cuenta Empresa</h2>
+      <p className="form-subtitle2"style={{fontSize:'15px', marginRight:'20rem'}}>Verificacion de datos <span className="iconEmp2"></span></p>
       <div className='contains'>
       <p className="subtitle2">Nuestro equipo se pondrá en contacto con usted en la brevedad, sus datos estan siendo procesados</p>
      <div className='btnss'>
@@ -45,7 +45,7 @@ const CompanyRegister2 = () => {
       <div style={{marginLeft:'6.5rem'}} className="otros-botones">
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
-          <button disabled className="otro-boton" style={{ backgroundColor: "#05c988" }}></button>
+          <button disabled className="otro-boton" style={{ backgroundColor: "#14dbad" }}></button>
         </div>
     </div>
     </div>

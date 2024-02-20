@@ -3,6 +3,7 @@ import { Button, Input, Row, Col } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
+
 const Login = () => {
   const [language, setLanguage] = useState('english');
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -65,7 +66,8 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h1 style={{ fontSize:'2rem' }} >{language === 'english' ? 'Atawall' : 'Atawall'}</h1>
+      {/* <span className="icon"></span> */}
+      <h1 style={{ fontSize:'2rem' }} > <span className="icon"></span>{language === 'english' ? 'Atawall' : 'Atawall'}</h1>
       <h2 style={{ fontSize:'1rem' }} className="subtitle">{language === 'english' ? 'Welcome' : 'Bienvenido'}</h2>
       {showLoginForm && (
         <>
@@ -109,7 +111,7 @@ const Login = () => {
       <Row>
         <Col span={8}>
           <div className="button-container">
-            <Button onClick={handleLoginClick} style={{ borderRadius:'17px' , width: '15rem', color: '#000', background: '#05c988', borderColor: '#05c988' }}>
+            <Button onClick={handleLoginClick} style={{ borderRadius:'17px' , width: '15rem', color: '#000', background: '#14dbad', borderColor: '#14dbad' }}>
               {showLoginForm ? 'Iniciar Sesión' : 'Login'}
             </Button>
           </div>
@@ -120,7 +122,7 @@ const Login = () => {
       </Row>
       <Row>
         <Col span={8}>
-          <p style={{ marginTop:'4rem' ,color: '#05c988', textDecoration: 'underline', textDecorationColor: '#05c988', width: '7rem', cursor: 'pointer', marginLeft: '2.3rem' }}>{language === 'english' ? 'Need Help?' : 'Necesitas ayuda?'}</p>
+          <p style={{ marginTop:'4rem' ,color: '#14dbad', textDecoration: 'underline', textDecorationColor: '#14dbad', width: '7rem', cursor: 'pointer', marginLeft: '2.3rem' }}>{language === 'english' ? 'Need Help?' : 'Necesitas ayuda?'}</p>
         </Col>
       </Row>
       <Row>

@@ -18,22 +18,25 @@ const MainPage = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="search">
+   <div class="search">
   <input type="text" placeholder="Search..." />
-  <button>Search</button> 
+</div>
+
+
+<div className="bell-icon">
+<span className="iconbell"></span> 
+<span className="iconmenu"></span>
 </div>
 
 <div className="bell-icon">
-  <img src="/bell.svg" /> 
+ 
 </div>
 
-<div className="bell-icon">
-  <img src="/bell.svg" /> 
-</div>
+
 
       <div className='container'>
       <div>
-        <h1 style={{fontSize:'1rem', marginBottom:'1rem'}}>Main Page</h1>
+        <h1 style={{fontSize:'1rem', marginBottom:'1rem', textAlign:'center'}}>Nombre Empresa</h1>
         </div>
         <div>
           <button className='main1' onClick={handleSubmit} type="submit">Muro</button>
@@ -49,6 +52,10 @@ const MainPage = () => {
         </div>
         <div>
           <button className='main1' type="submit">Salir</button>
+        </div>
+        <div>
+          <h2 style={{fontSize:'20px', marginLeft:'3rem'}}><span className="iconata"></span>Atawall</h2>
+        
         </div>
 
       </div>

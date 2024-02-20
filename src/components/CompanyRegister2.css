@@ -57,7 +57,7 @@
 
 .finalizar {
   border-radius: 50rem;
-  border-color: #05c988;
+  border-color: #14dbad;
   background: #000;
 }
 
@@ -65,4 +65,15 @@
   .btnss {
     margin-left: 0;
   }
+}
+
+.iconEmp2 {
+  width: 34px; /* Ancho del icono */
+  height: 34px; /* Alto del icono */
+  background-image: url('./assets/icons/CuentaEmpresa.svg'); /* Ruta al archivo SVG */
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -23rem; /* Espacio entre el icono y el texto */
+  margin-top: -1rem;
 }

@@ -20,7 +20,7 @@ const Register = () => {
 
   return (
     <div>
-      <h1 style={{ fontSize:'2rem', marginBottom:'6rem' }} className="titulo-global">Atawall</h1>
+      <h1 style={{ fontSize:'2rem', marginBottom:'6rem' }} className="titulo-global"><span className="icon"></span>Atawall</h1>
       <div className="Register">
         <h2 style={{ fontSize:'1rem' }} className="titulo">¿Con qué perfil desea registrarte?</h2>
         <div className="perfiles">
@@ -29,16 +29,16 @@ const Register = () => {
             onClick={() => handleButtonClick("Individuo")}
             style={{ marginRight: "10px" }}
           >
-            <i className="fa fa-user"></i>
             Individuo
+            <span className="iconIndividuo"></span>
           </button>
           <button
             className={`perfil ${perfil === "Empresa" ? "perfil-activo" : ""}`}
             onClick={() => handleButtonClick("Empresa")}
             style={{ marginRight: "10px" }} 
           >
-            <i className="fa fa-building"></i>
             Empresa
+           <span className="iconEmpresa"></span>
           </button>
           {/* <button
             className={`perfil ${perfil === "Proveedor" ? "perfil-activo" : ""}`}
@@ -59,7 +59,7 @@ const Register = () => {
         </button>
 
         <div className="otros-botones">
-          <button disabled className="otro-boton" style={{ backgroundColor: "#05c988" }}></button>
+          <button disabled className="otro-boton" style={{ backgroundColor: "#14dbad" }}></button>
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
           <button disabled className="otro-boton" style={{ backgroundColor: "#1b1b1b" }}></button>
         </div>
