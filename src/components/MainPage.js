@@ -1,6 +1,9 @@
 // MainPage.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './navbar';
+import './Card.css'
+
 
 import './MainPage.css';
 
@@ -16,25 +19,20 @@ const MainPage = () => {
     navigate('/');
   };
 
+  const mercadoia = (e) => {
+    e.preventDefault();
+
+    
+    navigate('/mercadoAI');
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-   <div class="search">
-  <input type="text" placeholder="Search..." />
-</div>
-
-
-<div className="bell-icon">
-<span className="iconbell"></span> 
-<span className="iconmenu"></span>
-</div>
-
-<div className="bell-icon">
- 
-</div>
-
-
-
+ <div>
+    <div>
+    <Navbar />
+  </div>
       <div className='container'>
+       
       <div>
         <h1 style={{fontSize:'1rem', marginBottom:'1rem', textAlign:'center'}}>Nombre Empresa</h1>
         </div>
@@ -42,7 +40,7 @@ const MainPage = () => {
           <button className='main1' onClick={handleSubmit} type="submit">Muro</button>
         </div>
         <div>
-          <button className='main1' type="submit">Mercado AI</button>
+          <button className='main1' onClick={mercadoia} type="submit">Mercado AI</button>
         </div>
         <div>
           <button className='main1' type="submit">Cuentas</button>
@@ -59,7 +57,7 @@ const MainPage = () => {
         </div>
 
       </div>
-    </form>
+      </div>
   );
 };
 

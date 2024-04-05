@@ -1,0 +1,23 @@
+.cards {
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio entre las tarjetas */
+    width: 24rem;
+    text-align: center;
+  }
+  
+  .card {
+    flex: 1; /* Hace que las tarjetas ocupen el mismo ancho */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
