@@ -1,21 +1,37 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Navbar from './navbar';
+import Card from './Card';
+import CardBlack from './CardBlack';
 
-const Container = styled.div`
-  background-color: #333;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  width: 200px;
-  color: white;
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+`;
+
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 6rem 1rem 1rem;
+`;
+
+const VendorSearchContainer = styled.div`
+  margin: 1rem;
 `;
 
 const ActionButtons = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem; // Aumentamos el margen inferior
 `;
 
-const Button = styled.button`
+const SwitchButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -27,29 +43,33 @@ const Button = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   height: 2.5rem;
-  background-color: ${(props) => props.primary ? '#4CAF50' : '#555'};
+  background-color: ${(props) => props.active ? '#14dbad' : '#1b1b1b'};
   color: white;
   border-radius: 0.5rem;
   padding: 0.25rem 1rem;
+  margin-right: 0.5rem;
 
   &:hover {
-    background-color: rgba(76, 175, 80, 0.9);
+    background-color: #14dbad;
   }
 `;
 
 const Filters = styled.div`
-  display: space-y-3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // Espacio entre los filtros
 `;
 
 const FilterItem = styled.div`
   display: flex;
   align-items: center;
+  gap: 0.5rem; // Espacio entre el switch y el selector
 `;
 
 const Switch = styled.button`
   display: inline-flex;
   height: 24px;
-  width: 44px;
+  width: 14px;
   align-items: center;
   border-radius: 9999px;
   border: 2px solid transparent;
@@ -57,13 +77,15 @@ const Switch = styled.button`
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   cursor: pointer;
-  background-color: ${(props) => props.checked ? '#4CAF50' : '#555'};
+  margin-left: 5.5rem;
+
+  background-color: ${(props) => props.checked ? '#14dbad' : '#1b1b1b'};
 
   &::after {
     content: "";
     display: block;
     height: 20px;
-    width: 20px;
+    width: 10px;
     border-radius: 9999px;
     background-color: white;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -79,10 +101,10 @@ const Dropdown = styled.button`
   align-items: center;
   justify-content: space-between;
   height: 2.5rem;
-  width: 100%;
+  width: 150px; // Ancho reducido
   border-radius: 0.5rem;
-  border: 1px solid #555;
-  background-color: #555;
+  border: 1px solid #1b1b1b;
+  background-color: #1b1b1b;
   color: white;
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
@@ -92,17 +114,17 @@ const Dropdown = styled.button`
 
   &:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
+    border-color: #14dbad;
+    box-shadow: 0 0 0 2px #14dbad;
   }
 `;
 
 const Input = styled.input`
-  height: 2.5rem;
-  width: 100%;
+  height: 2rem;
+  width: 126px; // Ancho reducido
   border-radius: 0.5rem;
   border: none;
-  background-color: #555;
+  background-color: #1b1b1b;
   color: white;
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
@@ -112,8 +134,8 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.5);
+    border-color: #14dbad;
+    box-shadow: 0 0 0 2px #14dbad;
   }
 `;
 
@@ -124,17 +146,26 @@ const VendorSearch = () => {
   const [location, setLocation] = useState('');
   const [proAccounts, setProAccounts] = useState(false);
   const [ai, setAi] = useState(false);
+  const [sellMode, setSellMode] = useState('sell');
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Implement filtering logic here based on the state values
+    // Implement 
+  };
+
+  const handleSellModeChange = (mode) => {
+    setSellMode(mode);
   };
 
   return (
-    <Container>
+    <VendorSearchContainer>
       <ActionButtons>
-        <Button primary>Vender</Button>
-        <Button>Vender con IA</Button>
+        <SwitchButton active={sellMode === 'sell'} onClick={() => handleSellModeChange('sell')}>
+          Vender
+        </SwitchButton>
+        <SwitchButton active={sellMode === 'ai'} onClick={() => handleSellModeChange('ai')}>
+          Vender con IA
+        </SwitchButton>
       </ActionButtons>
       <p className="text-xs mb-4">los filtros harán tu búsqueda más sencilla.</p>
       <Filters>
@@ -155,8 +186,27 @@ const VendorSearch = () => {
           <Dropdown>Ubicación</Dropdown>
         </FilterItem>
       </Filters>
-    </Container>
+    </VendorSearchContainer>
   );
 };
 
-export default VendorSearch;
+const MercadoAiPage = () => {
+  return (
+    <PageContainer>
+      <Navbar />
+      <ContentContainer>
+        <div className="cards">
+          <Card color="yellow" title="Compra" />
+          <Card color="green" title="Venta" />
+        </div>
+        <div style={{ marginTop: '20px' }}>
+          <CardBlack>
+            <VendorSearch />
+          </CardBlack>
+        </div>
+      </ContentContainer>
+    </PageContainer>
+  );
+};
+
+export default MercadoAiPage;

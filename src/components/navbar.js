@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav style={{marginTop:'5rem'}} className="navbar">
    <div class="search">
   <input type="text" placeholder="Search..." />
 </div>
