@@ -14,6 +14,7 @@ import FinishRegister from './components/FinishRegister';
 import MercadoAiPage from './components/mercadoAI';
 import Card from './components/Card';
 import CardBlack from './components/CardBlack';
+import TermsAndConditions from './components/TermsAndConditions';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/mercadoAi" element={<MercadoAiPage />} />
         <Route path="/Card" element={<Card />} />
         <Route path="/CardBlack" element={<CardBlack />} />
+        <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
 
 
       </Routes>

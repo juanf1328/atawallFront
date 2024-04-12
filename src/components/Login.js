@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Input, Row, Col } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import TermsAndConditions from './TermsAndConditions';
 import './Login.css';
-
 
 const Login = () => {
   const [language, setLanguage] = useState('english');
@@ -53,7 +53,6 @@ const Login = () => {
 
       // Redirige al usuario a la página principal
       navigate('/main');
-
     } catch (error) {
       console.error('Error:', error);
     }
@@ -64,11 +63,20 @@ const Login = () => {
     navigate('/register');
   };
 
+  const handleTermsAndConditionsClick = () => {
+    // Redirige al usuario a la página de Términos y Condiciones
+    navigate('/TermsAndConditions');
+  };
+
   return (
     <div className="login-container">
-      {/* <span className="icon"></span> */}
-      <h1 style={{ fontSize:'2rem' }} > <span className="icon"></span>{language === 'english' ? 'Atawall' : 'Atawall'}</h1>
-      <h2 style={{ fontSize:'1rem' }} className="subtitle">{language === 'english' ? 'Welcome' : 'Bienvenido'}</h2>
+      <h1 style={{ fontSize: '2rem' }}>
+        <span className="icon"></span>
+        {language === 'english' ? 'Atawall' : 'Atawall'}
+      </h1>
+      <h2 style={{ fontSize: '1rem' }} className="subtitle">
+        {language === 'english' ? 'Welcome' : 'Bienvenido'}
+      </h2>
       {showLoginForm && (
         <>
           <Row>
@@ -82,8 +90,8 @@ const Login = () => {
                   height: '2rem',
                   marginTop: '1rem',
                   borderColor: '#1b1b1b',
-                  background:'#fff',
-                  color:'#000'
+                  background: '#fff',
+                  color: '#000',
                 }}
                 placeholder={language === 'english' ? 'Email' : 'Correo electrónico'}
               />
@@ -99,8 +107,8 @@ const Login = () => {
                   marginLeft: '-0.5rem',
                   height: '2rem',
                   borderColor: '#1b1b1b',
-                  background:'#fff',
-                  color:'#000'
+                  background: '#fff',
+                  color: '#000',
                 }}
                 placeholder={language === 'english' ? 'Password' : 'Contraseña'}
               />
@@ -111,26 +119,72 @@ const Login = () => {
       <Row>
         <Col span={8}>
           <div className="button-container">
-            <Button onClick={handleLoginClick} style={{ borderRadius:'17px' , width: '15rem', color: '#000', background: '#14dbad', borderColor: '#14dbad' }}>
+            <Button
+              onClick={handleLoginClick}
+              style={{
+                borderRadius: '17px',
+                width: '15rem',
+                color: '#000',
+                background: '#14dbad',
+                borderColor: '#14dbad',
+              }}
+            >
               {showLoginForm ? 'Iniciar Sesión' : 'Login'}
             </Button>
           </div>
           <div className="button-container">
-            <Button onClick={handleRegisterClick} style={{ borderRadius:'17px' , width: '15rem', marginTop: '10px', background: '#1b1b1b', color: '#fff', borderColor: '#fff' }}>{language === 'english' ? 'Register' : 'Registrarme'}</Button>
+            <Button
+              onClick={handleRegisterClick}
+              style={{
+                borderRadius: '17px',
+                width: '15rem',
+                marginTop: '10px',
+                background: '#1b1b1b',
+                color: '#fff',
+                borderColor: '#fff',
+              }}
+            >
+              {language === 'english' ? 'Register' : 'Registrarme'}
+            </Button>
           </div>
         </Col>
       </Row>
       <Row>
         <Col span={8}>
-          <p style={{ marginTop:'4rem' ,color: '#14dbad', textDecoration: 'underline', textDecorationColor: '#14dbad', width: '7rem', cursor: 'pointer', marginLeft: '2.3rem' }}>{language === 'english' ? 'Need Help?' : 'Necesitas ayuda?'}</p>
+          <p
+            style={{
+              marginTop: '4rem',
+              color: '#14dbad',
+              textDecoration: 'underline',
+              textDecorationColor: '#14dbad',
+              width: '7rem',
+              cursor: 'pointer',
+              marginLeft: '2.3rem',
+            }}
+            onClick={handleTermsAndConditionsClick}
+          >
+            {language === 'english' ? 'Terms & Conditions' : 'Términos y condiciones'}
+          </p>
         </Col>
       </Row>
       <Row>
         <Col span={8}>
           <div className="language-container">
-            <Button style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('spanish')} className="language-button">ESP</Button>
+            <Button
+              style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }}
+              onClick={() => changeLanguage('spanish')}
+              className="language-button"
+            >
+              ESP
+            </Button>
             <div className="language-divider" />
-            <Button style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }} onClick={() => changeLanguage('english')} className="language-button">ENG</Button>
+            <Button
+              style={{ color: '#7c7c7c', background: '#212121', borderColor: '#1b1b1b' }}
+              onClick={() => changeLanguage('english')}
+              className="language-button"
+            >
+              ENG
+            </Button>
           </div>
         </Col>
       </Row>
