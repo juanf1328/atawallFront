@@ -1,15 +1,17 @@
+// Importaciones de React y componentes de Ant Design
 import React from 'react';
-import { Button, Row, Col } from 'antd';
-import './TermsAndConditions.css';
+import { Button, Row, Col } from 'antd'; // Importa componentes de Ant Design
+import './TermsAndConditions.css'; // Importa estilos CSS para el componente
 
+// Componente funcional TermsAndConditions que recibe 'language' como prop
 const TermsAndConditions = ({ language }) => {
   return (
-    <div className="terms-container">
-      <h1 style={{ fontSize: '2rem' }}>
-        <span className="icon"></span>
-        {language === 'english' ? 'Terms and Conditions' : 'Términos y condiciones'}
+    <div className="terms-container"> {/* Contenedor principal */}
+      <h1 style={{ fontSize: '2rem' }}> {/* Título con tamaño de fuente */}
+        <span className="icon"></span> {/* Ícono (a completar según diseño) */}
+        {language === 'english' ? 'Terms and Conditions' : 'Términos y condiciones'} {/* Título según idioma */}
       </h1>
-      <div className="terms-content">
+      <div className="terms-content"> {/* Contenido de términos y condiciones */}
         <p>
           {language === 'english'
             ? 'By using our platform, you agree to the following terms and conditions:'
@@ -33,9 +35,9 @@ const TermsAndConditions = ({ language }) => {
           </li>
         </ul>
       </div>
-      <Row>
-        <Col span={8}>
-          <div className="button-container">
+      <Row> {/* Fila de diseño */}
+        <Col span={8}> {/* Columna de diseño con ancho de 8 */}
+          <div className="button-container"> {/* Contenedor del botón */}
             <Button
               style={{
                 borderRadius: '17px',
@@ -45,7 +47,7 @@ const TermsAndConditions = ({ language }) => {
                 borderColor: '#14dbad',
               }}
             >
-              {language === 'english' ? 'Accept' : 'Aceptar'}
+              {language === 'english' ? 'Accept' : 'Aceptar'} {/* Texto del botón según idioma */}
             </Button>
           </div>
         </Col>
@@ -54,4 +56,4 @@ const TermsAndConditions = ({ language }) => {
   );
 };
 
-export default TermsAndConditions;
+export default TermsAndConditions; // Exporta el componente TermsAndConditions

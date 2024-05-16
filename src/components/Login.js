@@ -1,38 +1,44 @@
+// Importaciones de React y librerías
 import React, { useState } from 'react';
-import { Button, Input, Row, Col } from 'antd';
-import { useNavigate } from 'react-router-dom';
-import TermsAndConditions from './TermsAndConditions';
-import './Login.css';
+import { Button, Input, Row, Col } from 'antd'; // Importa componentes de Ant Design
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate para la navegación
+import TermsAndConditions from './TermsAndConditions'; // Importa el componente de Términos y Condiciones
+import './Login.css'; // Importa estilos CSS para el componente Login
 
+// Componente Login
 const Login = () => {
-  const [language, setLanguage] = useState('english');
-  const [showLoginForm, setShowLoginForm] = useState(false);
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  // Estados del componente
+  const [language, setLanguage] = useState('english'); // Estado para el idioma
+  const [showLoginForm, setShowLoginForm] = useState(false); // Estado para mostrar/ocultar el formulario de inicio de sesión
+  const [username, setUsername] = useState(''); // Estado para el nombre de usuario
+  const [password, setPassword] = useState(''); // Estado para la contraseña
+  const navigate = useNavigate(); // Función de navegación
 
+  // Función para cambiar el idioma
   const changeLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
   };
 
+  // Función para manejar el cambio en el campo de usuario
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
 
+  // Función para manejar el cambio en el campo de contraseña
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
+  // Función para manejar el clic en el botón de inicio de sesión
   const handleLoginClick = () => {
-    // Si los campos de inicio de sesión están siendo mostrados, ejecuta el evento handleSubmit
     if (showLoginForm) {
       handleSubmit();
     } else {
-      // De lo contrario, muestra los campos de inicio de sesión
       setShowLoginForm(true);
     }
   };
 
+  // Función para enviar el formulario de inicio de sesión
   const handleSubmit = async () => {
     const requestOptions = {
       method: 'POST',
@@ -49,25 +55,23 @@ const Login = () => {
 
       const data = await response.json();
 
-      // Si el inicio de sesión es exitoso, almacena el token o los datos del usuario según sea necesario.
-
-      // Redirige al usuario a la página principal
       navigate('/main');
     } catch (error) {
       console.error('Error:', error);
     }
   };
 
+  // Función para manejar el clic en el botón de registro
   const handleRegisterClick = () => {
-    // Redirige al usuario a la página de registro
     navigate('/register');
   };
 
+  // Función para manejar el clic en el enlace de Términos y Condiciones
   const handleTermsAndConditionsClick = () => {
-    // Redirige al usuario a la página de Términos y Condiciones
     navigate('/TermsAndConditions');
   };
 
+  // Renderizado del componente
   return (
     <div className="login-container">
       <h1 style={{ fontSize: '2rem' }}>
@@ -192,4 +196,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login; // Exporta el componente Login

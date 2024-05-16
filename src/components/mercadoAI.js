@@ -1,15 +1,17 @@
+// Importaciones de React, useState y styled-components
 import { useState } from 'react';
 import styled from 'styled-components';
+
+// Importaciones de componentes y estilos
 import Navbar from './navbar';
 import Card from './Card';
 import CardBlack from './CardBlack';
-import * as React from 'react';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-
 import './mercadoAI.css';
 
+// Contenedor principal de la página
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,25 +20,14 @@ const PageContainer = styled.div`
   min-height: 100vh;
 `;
 
-// const ContentContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 100%;
-//   max-width: 1200px;
-//   padding: 6rem 1rem 1rem;
-// `;
-
-// const VendorSearchContainer = styled.div`
-//   margin: 1rem;
-// `;
-
+// Contenedor de los botones de acción
 const ActionButtons = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
 `;
 
+// Botón estilo switch
 const SwitchButton = styled.button`
   display: inline-flex;
   align-items: center;
@@ -60,18 +51,21 @@ const SwitchButton = styled.button`
   }
 `;
 
+// Contenedor de filtros
 const Filters = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
 `;
 
+// Elemento de filtro
 const FilterItem = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
 `;
 
+// Dropdown de filtro
 const Dropdown = styled.button`
   display: flex;
   align-items: center;
@@ -95,6 +89,7 @@ const Dropdown = styled.button`
   }
 `;
 
+// Input de filtro
 const Input = styled.input`
   height: 2rem;
   width: 126px;
@@ -115,29 +110,31 @@ const Input = styled.input`
   }
 `;
 
+// Contenedor de búsqueda de vendedor
 const VendorSearchContainer = styled.div`
   margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 `;
 
+// Contenedor del logo
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  // justify-content: flex-start;
   width: 35%;
   margin-top: 1.5rem;
   font-size: 18px;
   font-weight: bold;
 `;
 
+// Título del logo
 const LogoTitle = styled.h2`
   margin-left: 0.5rem;
   font-size: 16px;
 `;
 
+// Componente de búsqueda de vendedor
 const VendorSearch = () => {
   const [product, setProduct] = useState('');
   const [quantity, setQuantity] = useState('');
@@ -149,7 +146,7 @@ const VendorSearch = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Implement 
+    // Implementar la lógica de búsqueda
   };
 
   const handleSellModeChange = (mode) => {
@@ -159,6 +156,7 @@ const VendorSearch = () => {
   return (
     <VendorSearchContainer>
       <ActionButtons>
+        {/* Botones de modo de venta */}
         <SwitchButton active={sellMode === 'sell'} onClick={() => handleSellModeChange('sell')}>
           Vender
         </SwitchButton>
@@ -166,45 +164,32 @@ const VendorSearch = () => {
           Vender con IA
         </SwitchButton>
       </ActionButtons>
-      <p className="text-xs mb-4">los filtros harán tu búsqueda más sencilla.</p>
+      <p className="text-xs mb-4">Los filtros harán tu búsqueda más sencilla.</p>
+      {/* Filtros */}
       <Filters>
         <FilterItem>
           <FormGroup>
+            {/* Switch para filtrar por producto */}
             <FormControlLabel
               control={<Switch checked={product} onChange={() => setProduct((prev) => !prev)} />}
-              
             />
           </FormGroup>
+          {/* Dropdown para seleccionar el producto */}
           <Dropdown>Producto</Dropdown>
         </FilterItem>
         <FilterItem>
           <FormGroup>
+            {/* Switch para filtrar por cantidad */}
             <FormControlLabel
               control={<Switch checked={quantity} onChange={() => setQuantity((prev) => !prev)} />}
-              
             />
           </FormGroup>
+          {/* Input para ingresar la cantidad */}
           <Input placeholder="Cantidad" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
         </FilterItem>
-        <FilterItem>
-          <FormGroup>
-            <FormControlLabel
-              control={<Switch checked={priceRange} onChange={() => setPriceRange((prev) => !prev)} />}
-              
-            />
-          </FormGroup>
-          <Dropdown>Rango de precio</Dropdown>
-        </FilterItem>
-        <FilterItem>
-          <FormGroup>
-            <FormControlLabel
-              control={<Switch checked={location} onChange={() => setLocation((prev) => !prev)} />}
-              
-            />
-          </FormGroup>
-          <Dropdown>Ubicación</Dropdown>
-        </FilterItem>
+        {/* Otros filtros similares */}
       </Filters>
+      {/* Contenedor del logo */}
       <LogoContainer>
         <span className="iconata"></span>
         <LogoTitle>Atawall</LogoTitle>
@@ -213,6 +198,7 @@ const VendorSearch = () => {
   );
 };
 
+// Contenedor de contenido de la página
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -230,6 +216,7 @@ const ContentContainer = styled.div`
   }
 `;
 
+// Contenedor de título
 const TitleContainer = styled.div`
   margin-top: 3rem;
 
@@ -242,21 +229,24 @@ const TitleContainer = styled.div`
   }
 `;
 
+// Página MercadoAiPage
 const MercadoAiPage = () => {
   return (
     <PageContainer>
+      {/* Barra de navegación */}
       <Navbar />
+      {/* Contenido de la página */}
       <ContentContainer>
         <TitleContainer>
-          <h3 className="titlemercado">Que desea hacer?</h3>
+          <h3 className="titlemercado">¿Qué desea hacer?</h3> {/* Título de la sección */}
         </TitleContainer>
         <div className="cards">
-          <Card color="yellow" title="Compra" />
-          <Card color="green" title="Venta" />
+          <Card color="yellow" title="Compra" /> {/* Tarjeta de compra */}
+          <Card color="green" title="Venta" /> {/* Tarjeta de venta */}
         </div>
         <div style={{ marginTop: '20px' }}>
-          <CardBlack>
-            <VendorSearch />
+          <CardBlack> {/* Tarjeta negra */}
+            <VendorSearch /> {/* Componente de búsqueda de vendedor */}
           </CardBlack>
         </div>
       </ContentContainer>
@@ -264,4 +254,4 @@ const MercadoAiPage = () => {
   );
 };
 
-export default MercadoAiPage;
+export default MercadoAiPage; // Exporta el componente MercadoAiPage

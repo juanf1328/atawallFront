@@ -1,24 +1,25 @@
+/* Define la fuente personalizada Montserrat */
 @font-face {
-    font-family: 'Montserrat';
-    src: url('./components/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  * {
-    font-family: 'Montserrat', sans-serif;
-  }
-  
+  font-family: 'Montserrat';
+  src: url('./components/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'); /* Ruta de la fuente Montserrat */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplica la fuente Montserrat a todos los elementos */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos generales para el body */
 body {
-    background-color: #212121;
-    color: white;
-    font-family: 'Helvetica Neue', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
- 
+  background-color: #212121; /* Color de fondo */
+  color: white; /* Color de texto */
+  font-family: 'Helvetica Neue', sans-serif; /* Fuente secundaria en caso de que Montserrat no esté disponible */
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  justify-content: center; /* Alinea horizontalmente los elementos al centro */
+  height: 100vh; /* Establece la altura al 100% del viewport */
+  margin: 0; /* Elimina los márgenes */
+  font-size: 1.5rem; /* Tamaño de fuente base */
+}
